@@ -1,0 +1,31 @@
+#form {
+  width: 400px;
+  display: flex;
+}
+
+#form input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+ul {
+  padding: 0;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  list-style: circle;
+}
+ul li {
+  display: flex;
+}
+ul li span {
+  flex: 1;
+}
+.addTodo {
+  background-color: green;
+  color: #fff;
+}
+.close {
+  background-color: red;
+  color: #fff;
+}
