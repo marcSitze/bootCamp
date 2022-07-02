@@ -23,7 +23,11 @@ const addTodo = e => {
     console.log(todos);
 
     // update the UI
-      ul.innerHTML += item(data);
+      ul.innerHTML = '';
+
+      todos.forEach(todo => {
+        ul.innerHTML += item(todo);
+      })
       form.reset();
       form.text.focus();
   }
