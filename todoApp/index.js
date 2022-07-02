@@ -10,33 +10,6 @@ let todoToUpdate = '';
 
 const item = (data) => `<li><span>${data.text}</span><button data-id=${data.id} class="close">X</button></li>`
 
-// const getUpdateTodo = todo => {
-//   console.log('id edit', todo);
-//   form.text.value = todo.text;
-//   console.log('todos: ', todos);
-//   editBtn.style.display = 'block';
-// }
-
-// const updateTodo = () => {
-//   todos.map((i, index) => {
-//     if(String(i.id) === String(todoToUpdate)){
-//       console.log('eqal');
-//       console.log('form.text.value: ', form.text.value)
-//       console.log('index: ', i[index])
-//       todos[index] = {
-//         ...i[index],
-//         text: form.text.value ?? form.text.value
-//       }
-//     }
-
-//     ul.innerHTML = '';
-
-//     todos.forEach(todo => {
-//       ul.innerHTML += item(todo);
-//     })
-//   })
-// }
-
 const addTodo = e => {
 
   if(form.text.value) {
@@ -81,10 +54,5 @@ ul.addEventListener('click', e => {
   if(e.target.classList.contains('close') && e.target.getAttribute('data-id')) {
     deleteTodo(id);
   }
-  // if(e.target.classList.contains('edit') && e.target.getAttribute('data-id')){
-  //   todoToUpdate = id;
-  //   const todo = todos.find(todo => todo.id === Number(id));
-  //   getUpdateTodo(todo);
-  // }
+
 });
-// editBtn.addEventListener('click', updateTodo)
